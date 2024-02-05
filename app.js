@@ -1,21 +1,22 @@
 import React from 'react';
-import dexInfo from './Pokedex.js';
-import Pokecard from './Pokecard.js';
+import pokedex from './pokedex.js';
+import pokecard from './pokecard.js';
 import './pokemon.css';
 
 function App() {
-    
-    const pokemon = dexInfo;
-    return(<div>
+    const pokemon = pokedex;
+return(
+    <div>
         <h2 className='pokedex-name'> Pokedex </h2>
         <ul className='Pokedex-cards'>
-            {pokemon.map(p => ( 
+            {pokemon.map(p =>( 
                 <li>
-                    <Pokecard pokemon={p}/>
+                    <pokecard pokemon={p}/>
                 </li>
             ))}           
         </ul>      
     </div>
+
 )
 
 }
